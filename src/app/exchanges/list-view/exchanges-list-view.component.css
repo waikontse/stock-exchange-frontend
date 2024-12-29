@@ -1,0 +1,15 @@
+.exchange-card {
+  max-width: 400px;
+  border-radius: 15px;
+  border-color: var(--orange);
+  row-gap: 14px;
+}
+
+.result {
+  display: grid;
+  column-gap: 14px;
+  row-gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+  margin-top: 50px;
+  justify-content: space-around;
+}

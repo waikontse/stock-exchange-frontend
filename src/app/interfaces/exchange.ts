@@ -6,3 +6,5 @@ export interface Exchange {
   liveInMarket: boolean,
   stocks: Stock[]
 }
+
+export declare type Exchanges = Exchange[]

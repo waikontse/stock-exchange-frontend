@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Exchange} from '../interfaces/exchange';
+import {Exchange, Exchanges} from '../interfaces/exchange';
 import {CreateNewExchangeRequest} from '../interfaces/create-new-exchange-request';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
@@ -14,7 +14,7 @@ export class ExchangeService {
   constructor(private http: HttpClient) {
   }
 
-  getAllExchanges(): Observable<Exchange[]> {
+  getAllExchanges(): Observable<Exchanges> {
     return this.http.get<Exchange[]>(`${environment.apiUrl}/v1/stock-exchanges`)
   }
 

@@ -1,24 +1,25 @@
 import {Component, Input} from '@angular/core';
-import {ExchangeService} from '../services/exchange.service';
-import {Exchange} from '../interfaces/exchange';
+import {ExchangeService} from '../../services/exchange.service';
+import {Exchange} from '../../interfaces/exchange';
 import {NgForOf} from '@angular/common';
+import {MatCardModule} from '@angular/material/card';
+import {MatButton} from '@angular/material/button';
 
 @Component({
   selector: 'app-exchanges',
   imports: [
-    NgForOf
+    NgForOf, MatCardModule, MatButton
   ],
-  templateUrl: './exchanges.component.html',
+  templateUrl: './exchanges-list-view.component.html',
   standalone: true,
-  styleUrl: './exchanges.component.css'
+  styleUrl: './exchanges-list-view.component.css'
 })
-export class ExchangesComponent {
+export class ExchangesListViewComponent {
   @Input() protected exchanges!: Exchange[]
 
   constructor(private exchangeService: ExchangeService) {
   }
 
-  // Try to call the exchanges endpoint
   ngOnInit() {
     this.exchangeService.getAllExchanges().subscribe(result => {
       this.exchanges = result

@@ -1,0 +1,17 @@
+<section class="exchanges">
+  <section class="result">
+    <mat-card class="exchange-card" appearance="outlined" *ngFor="let exchange of exchanges">
+      <mat-card-header>
+        <mat-card-title>{{exchange.name}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{exchange.description}}</p>
+        <p>live?: {{exchange.liveInMarket}}</p>
+        <p>Stocks count: {{exchange.stocks.length}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-flat-button>Details</button>
+      </mat-card-actions>
+    </mat-card>
+  </section>
+</section>

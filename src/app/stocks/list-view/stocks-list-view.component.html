@@ -1,0 +1,14 @@
+<section class="stocks">
+  <section class="result">
+    <mat-card class="stock-card" appearance="outlined" *ngFor="let stock of stocks">
+      <mat-card-header>
+        <mat-card-title class="title">Symbol: {{ stock.name }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{stock.description}}</p>
+        <p>Price: {{ stock | price }}</p>
+        <p>Last update: {{stock.lastUpdated}}</p>
+      </mat-card-content>
+    </mat-card>
+  </section>
+</section>

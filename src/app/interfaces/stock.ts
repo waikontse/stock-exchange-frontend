@@ -4,3 +4,5 @@ export interface Stock {
   priceInCents: number,
   lastUpdated: string
 }
+
+export declare type Stocks = Stock[]

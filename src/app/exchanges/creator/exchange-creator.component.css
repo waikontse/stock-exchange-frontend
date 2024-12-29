@@ -1,0 +1,14 @@
+/*.form {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  flex-basis: 50%;*/
+/*  align-items: flex-start;*/
+/*}*/
+
+.exchange-card {
+  max-width: 800px;
+  border-radius: 1px;
+  border-color: var(--orange);
+  row-gap: 14px;
+  margin: 50px auto auto;
+}
