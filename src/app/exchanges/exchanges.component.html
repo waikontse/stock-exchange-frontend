@@ -1,1 +1,8 @@
-<p>exchanges works!</p>
+<section>
+  <div class="stock-exchanges" *ngFor="let exchange of exchanges">
+    <header>{{exchange.name}}</header>
+    <p>{{exchange.description}}</p>
+    <p>live?: {{exchange.liveInMarket}}</p>
+    <p>Stocks count: {{exchange.stocks.length}}</p>
+  </div>
+</section>
