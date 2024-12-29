@@ -19,9 +19,7 @@ export class ExchangeCreatorComponent {
   exchangeCreationForm = new FormGroup({
       name: new FormControl(''),
       description: new FormControl(''),
-    }
-  )
-
+    })
 
   constructor(private exchangeService: ExchangeService) {
   }
@@ -42,6 +40,6 @@ export class ExchangeCreatorComponent {
         this.exchangeCreationForm.controls.description.setValue('')
       },
       error: (e) => console.error("Failed to create a new exchange.", e)
-    }) 
+    })
   }
 }
