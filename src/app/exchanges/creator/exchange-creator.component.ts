@@ -17,9 +17,9 @@ import {MatButton} from '@angular/material/button';
 })
 export class ExchangeCreatorComponent {
   exchangeCreationForm = new FormGroup({
-      name: new FormControl(''),
-      description: new FormControl(''),
-    })
+    name: new FormControl(''),
+    description: new FormControl(''),
+  })
 
   constructor(private exchangeService: ExchangeService) {
   }

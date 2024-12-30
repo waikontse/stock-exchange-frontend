@@ -4,6 +4,7 @@ import {CreateNewStockRequest} from '../interfaces/create-new-stock-request';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {environment} from '../../environments/environment';
+import {UpdateStockRequest} from '../interfaces/update-stock-request';
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +24,9 @@ export class StockService {
 
   public createNewStock(request: CreateNewStockRequest): Observable<Stock> {
     return this.http.post<Stock>(`${environment.apiUrl}/v1/stocks`, request)
+  }
+
+  public updateStock(request: UpdateStockRequest): Observable<Stock> {
+    return this.http.post<Stock>(`${environment.apiUrl}/v1/stocks/${request.name}`, request)
   }
 }

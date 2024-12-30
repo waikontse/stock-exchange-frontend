@@ -1,0 +1,15 @@
+<section class="form">
+  <mat-card class="exchange-card" appearance="outlined" [formGroup]="registerStockFormGroup">
+    <mat-form-field class="form" appearance="fill">
+      <mat-label>Exchange name</mat-label>
+      <input matInput formControlName="exchangeName">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Stock name</mat-label>
+      <input matInput formControlName="stockName">
+    </mat-form-field>
+    <mat-card-actions>
+      <button mat-flat-button (click)="registerStockOnExchange()">Register</button>
+    </mat-card-actions>
+  </mat-card>
+</section>
