@@ -8,6 +8,8 @@
         <p>{{exchange.description}}</p>
         <p>live?: {{exchange.liveInMarket}}</p>
         <p>Stocks count: {{exchange.stocks.length}}</p>
+        <b>Registered</b>
+        <p *ngFor="let stock of exchange.stocks">{{stock.name}}</p>
       </mat-card-content>
       <mat-card-actions>
         <button mat-flat-button>Details</button>

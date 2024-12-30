@@ -16,6 +16,7 @@ import {MatButton} from '@angular/material/button';
 })
 export class ExchangesListViewComponent {
   @Input() protected exchanges!: Exchange[]
+  @Input() protected registeredStocks!: string
 
   constructor(private exchangeService: ExchangeService) {
   }
